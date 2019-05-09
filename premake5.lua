@@ -1,6 +1,8 @@
-doctest = path.getabsolute(".")
+libdoctest = {}
+libdoctest.path = path.getabsolute(".")
 
-function use_doctest()
-	includedirs "%{doctest}"
+function libdoctest.use()
+	includedirs "%{libdoctest.path}"
 end
 
+return libdoctest
